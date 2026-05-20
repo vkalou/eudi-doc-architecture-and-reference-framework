@@ -3011,7 +3011,7 @@ Note that independently of the status of the Wallet Provider, its Wallet Solutio
 lifecycle of a PID Provider or Attestation Provider:
 
 1. A PID Provider or an Attestation Provider is registered by a Registrar in its Member State. This is discussed in [Section 6.3.2](#632-pid-provider-or-attestation-provider-registration-and-notification).
-2. Under specific conditions, the REgistrar may decide to suspend or
+2. Under specific conditions, the Registrar may decide to suspend or
 cancel registration of a registered PID Provider or Attestation Provider. This
 is discussed in [Section 6.3.3](#633-suspension-or-cancellation-of-the-registration-of-a-pid-provider-or-attestation-provider).
 
@@ -3028,7 +3028,7 @@ European Commission:
 
 - **PID Providers** are notified to the Commission.
 - **QEAA Providers** are not notified to the Commission, except for establishing the [Art. 22](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.257.01.0073.01.ENG#d1e2162-73-1) Trusted List once a qualified status is granted.
-- The purpose of the notification of **PuB-EAA Providers** is mainly to the attention of QTSPs issuing qualified certificates for electronic signatures or seals to PuB-EAA Providers. QTSPs are expected to verify the Trusted List of PuB-EAA Providers prior to issuing a qualified certificate to any entity claiming to be a PuB-EAA Provider.
+- **PuB-EAA Providers** is mainly to the attention of QTSPs issuing qualified certificates for electronic signatures or seals to PuB-EAA Providers. QTSPs are expected to verify the Trusted List of PuB-EAA Providers prior to issuing a qualified certificate to any entity claiming to be a PuB-EAA Provider.
 - **Non-qualified EAA Providers** are not notified to the Commission.
 
 If the registration and notification processes are successful, at least the
@@ -3068,7 +3068,7 @@ fraudulently or as a result of an error.
 
 ##### 6.3.2.3 PID Provider or Attestation Provider receives an access certificate and a registration certificate
 
-When a PID Provider or Attestation Provider is registered by a Member State, a
+When a PID Provider or Attestation Provider is registered by a Member State, an
 Access Certificate Authority (see [Section 3.18](#318-access-certificate-authorities)
 issues an access certificate to the PID Provider or to the Attestation
 Provider. A PID Provider or an Attestation Provider needs such a certificate to
@@ -3080,9 +3080,7 @@ Provider. Similarly, an Attestation Provider access certificate does not
 indicate that its subject is a QEAA Provider, a PuB-EAA Provider, or a
 non-qualified EAA Provider. Furthermore, the access certificate of a PID
 Provider or Attestation Provider does not contain the Provider's registration to
-issue attestations of a specific type, for instance an mDL or diploma. Such
-information is included in the registration certificates (if issued), and in any
-case available in the Registrar's online service.
+issue attestations of a specific type, for instance an mDL or diploma. 
 
 Such information is instead available via the Registrar's online service.
 Additionally, the same information is included in a registration certificate
@@ -3364,7 +3362,7 @@ section B.
 
 The Wallet Instance connects to the Wallet Provider to be activated. Then, the
 Wallet Provider requests data about the User's device from the Wallet Instance.
-This data includes the characteristics of the WSCD(s) and keystores available to the device for securely storing cryptographic keys and data. The Wallet Provider needs this information to deploy a WSCA/WSCD in the Wallet Unit, and to be able to issue one or Wallet Unit Attestations to the Wallet Unit, see [Section 6.5.3.4](#6534-wallet-provider-issues-one-or-more-wuas-to-the-wallet-unit).
+This data includes the characteristics of the WSCD(s) and keystores available to the device for securely storing cryptographic keys and data. The Wallet Provider needs this information to deploy a WSCA/WSCD in the Wallet Unit, and to be able to issue one or more Wallet Unit Attestations to the Wallet Unit, see [Section 6.5.3.4](#6534-wallet-provider-issues-one-or-more-wuas-to-the-wallet-unit).
 
 Notes:
 
@@ -3389,13 +3387,13 @@ Provider to monitor its operational Wallet Instances. It is customary for mobile
 application developers to collect limited bug and error reports at runtime for
 improvement purposes. Error logs collected never contain personal data of the
 User. A list of possible data types to be collected, reasons for collection, and
-how the Wallet Instance monitoring should occur (frequency, mechanisms, does the
-collection require Wallet User's approval beyond standard app vendor practices)
+how the Wallet Instance monitoring should occur (frequency, mechanisms, whether the
+collection require Wallet User's approval beyond standard app vendor practices or not)
 is collected in the following table:
 
 | Data type | Reason for monitoring (if applicable, regulation) | Monitoring frequency etc. |
 | --- | --- | --- |
-| Runtime errors | Uncaught errors in production code | runtime and crash logs |
+| Runtime errors | Uncaught errors in production code | Runtime and crash logs |
 | UX and telemetry information | UX field analysis, may not be used to obtain behavioural data | runtime logs - *user consent preferred* |
 | OS version and health data | OS vulnerabilities | At Wallet Unit activation or OS update/upgrade and at continuous security posture monitoring |
 | Wallet SDK and SW library versions | Wallet Instance code vulnerabilities | At Wallet Unit roll out (as part of CI/CD process), at continuous security posture monitoring |
@@ -3440,7 +3438,7 @@ fraud and risk signals by Wallet Provider, see [Topic 56](./annexes/annex-2/anne
 
 ###### 6.5.3.3.1 Introduction
 
-During Wallet Unit activation, the Wallet Unit ensures that the Users sets up
+During Wallet Unit activation, the Wallet Unit ensures that the User sets up
 two User authentication mechanisms. The first of these mechanisms is implemented
 by the OS of the User's device and will be used before any operation of the
 Wallet Unit. The second mechanism is implemented by the WSCA/WSCD and will be
@@ -3557,7 +3555,7 @@ Therefore, the validity period of WUAs needs to be sufficiently long; [Technical
 - a WUA contains the information necessary to enable the PID Provider to do a revocation
 check for the WUA. See also [Section 6.6.2.4](#6624-pid-provider-or-attestation-provider-verifies-that-wua-is-not-revoked).
 
-The responsibilities of the Wallet Provider regarding issuance of a WUA are
+The responsibilities of the Wallet Provider regarding the issuance of a WUA are
 similar to those of a PID Provider or Attestation Provider regarding the
 issuance of a PID or an attestation. This means that after the initial issuance
 of a WUA during activation, the Wallet Provider will manage the WUA and will
@@ -3734,7 +3732,7 @@ for high-level requirements on Wallet Unit revocation.
 
 ##### 6.5.4.3 Migrating the PIDs and attestations in a Wallet Unit to a different Wallet Solution
 
-Article 5a 4 (g) of the [European Digital Identity Regulation] ensures the
+Article 5a4(g) of the [European Digital Identity Regulation] ensures the
 User's rights to data portability. Data portability means that a User can
 migrate to a different Wallet Solution. The User installs an instance of the new
 Wallet Solution, and then wants to restore the PIDs and attestations in their
@@ -3760,7 +3758,7 @@ implies the User must be able to authenticate towards the existing HSM from the
 new Wallet Unit, and be recognised as an existing User. For attestations bound
 to a keystore (rather than a WSCA/WSCD), the properties of the keystore
 determine if it's possible to export the attestation private keys to a location
-of the User's choosing. Most keystores will note allow this.
+of the User's choosing. Most keystores will not allow this.
 
 The fact that the Migration Object does not contain private keys means that PIDs
 and device-bound attestations cannot be backed up and restored from the object
@@ -4015,9 +4013,9 @@ identity of the PID Provider or Attestation Provider, using the subject
 information from the PID Provider's or Attestation Provider's access certificate.
 
 If any of these verifications fail, the Wallet Unit will delete the PID or
-attestation, and will inform the User that issuance was not successful.
+attestation, and will inform the User that the issuance was not successful.
 Otherwise, the Wallet Unit will store the PID or attestation and will inform the
-User that issuance was successful. If it supports the Digital Credentials API,
+User that the issuance was successful. If it supports the Digital Credentials API,
 see [Section 4.4.3](#443-remote-presentation-transaction-flows), the Wallet Unit
 will also disclose the fact that it contains the new PID or attestation to the Digital
 Credentials API framework, unless the User has disabled such disclosure.
@@ -4035,7 +4033,7 @@ High.
 
 PID Providers, in combination with Wallet Providers, have to ensure that the PID
 issuing process complies with this requirement, see also requirement ISSU_05 in
-Annex 2. During certification the responsible CAB decides whether the
+Annex 2. During certification, the responsible CAB decides whether the
 implemented process is indeed compliant.
 
 The ARF does not specify a process or mechanism for PID activation. PID
@@ -4473,7 +4471,7 @@ User feels that the Relying Party is actually requesting more data than needed,
 that implies that the Relying Party is not trustworthy. The User should not
 approve the presentation of any data in that case.
 
-The Wallet Unit will present the all approved User attributes, and only these,
+The Wallet Unit will present all the approved User attributes, and only these,
 to the Relying Party Instance.
 
 ##### 6.6.3.6 Relying Party Instance verifies the authenticity of the PID or attestation
@@ -4662,7 +4660,7 @@ has properly authenticated the User before allowing the User to present the
 attributes. Note that:
 
     - This trust is not based on the outcome of any verification by the Relying
-    Party but on a a-priori trust in the certified Wallet Unit and (for PIDs and
+    Party but on an a-priori trust in the certified Wallet Unit and (for PIDs and
     attestations with a security level High) the certified WSCA/WSCD.
     - Using this method implies that Relying Parties must verify device binding,
     as described in [Section 6.6.3.8](#6638-relying-party-instance-verifies-device-binding).
@@ -4803,7 +4801,7 @@ in practice:
     the Attestation Provider does this is out of scope of the ARF. For example,
     the Attestation Provider could request the User name and birth date from a
     PID on the Wallet Unit, verify that this information matches a record in its
-    database, issue a attestation corresponding to the information in that
+    database, issue an attestation corresponding to the information in that
     record, and then request the Wallet Unit to bind the public key in that
     attestation to the public key in the PID.
     - A Relying Party that has verified a proof of cryptographic binding between
