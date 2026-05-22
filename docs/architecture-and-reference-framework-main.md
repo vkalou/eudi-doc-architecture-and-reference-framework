@@ -5105,7 +5105,7 @@ These processes are discussed in the next subsections.
 ###### 6.6.6.2.1 Introduction
 
 Re-issuance means the replacement of a technical PID or attestation that already exists in
-a Wallet Unit by a technical PID or attestation having the same attestation type. Moreover, the existing and the new technical PID or attestation represent the same logical PID or attestation, see [Section 5.3](#53-logical-versus-technical-pids-and-attestations).Re-issuance is therefore always performed by the same PID Provider or Attestation Provider
+a Wallet Unit by a technical PID or attestation having the same attestation type. Moreover, the existing and the new technical PID or attestation represent the same logical PID or attestation, see [Section 5.3](#53-logical-versus-technical-pids-and-attestations). Re-issuance is therefore always performed by the same PID Provider or Attestation Provider
 that issued the existing PID or attestation. Re-issuance is always initiated by the Wallet
 Unit, although the User may prompt the Wallet Unit to start the process, and the PID Provider or Attestation Provider may tell the User that re-issuance is necessary.
 
